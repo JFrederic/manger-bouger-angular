@@ -1,0 +1,19 @@
+    <form #f="ngForm" ng-submit="displayMenus()" id="submit_menu">
+        <div class="form-group">
+            <label for="plats">Plats</label>
+            <select id="plats" class="form-control dropdown">
+                <option value="">Choisir un plat</option>
+                <option *ngFor="let plat of plats" let i = index; [value]="plat">{{plat}}</option>                         
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="boisson">Boisson</label>
+            <select id="boisson" class="dropdown form-control">
+                <option value="">Choisir une boisson</option>
+                <option *ngFor="let boisson of boissons" let i = index; [value]="boisson">{{boisson}}</option>                         
+            </select>
+        </div>
+        <button (click)="DisplayData()" type="submit" class="btn btn-success">Ajouter</button>
+    </form>
+

@@ -1,0 +1,35 @@
+    <div class="row">
+        <div class="col-md-6">
+            <form #f="ngForm" (ngSubmit)="newCalorie()" class="ui form" >
+                <div class="form-group">
+                    <label for="height">Taille : </label>
+                    <input [(ngModel)]="data.height" name="height" type="text" placeholder="Enter your height" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Poids : </label>
+                    <input type="text" [(ngModel)]="data.weight" name="weight" placeholder="Enter your weight" required >    
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age : </label>
+                    <input type="text" [(ngModel)]="data.age" name="age" placeholder="Enter your age" required >    
+                </div>
+
+                <div class="form-group">
+                    <label for="sexe">Sexe : </label>
+                    <label class="radio-inline">
+                        <input type="radio" [(ngModel)]="data.sex" name="sexe" checked="checked" value="Homme" /> Homme
+                    </label>
+                    <label for="" class="radio-inline">
+                        <input type="radio" [(ngModel)]="data.sex" name="sexe" checked="checked" value="Femme" /> Femme
+                    </label>
+                </div>
+
+                <button class="btn btn-success pull-left" type="submit" >Confirmer</button>
+                 <div class="ui message" id="result">
+                    {{result}}
+                </div>
+            </form>
+        </div>
+    </div>
